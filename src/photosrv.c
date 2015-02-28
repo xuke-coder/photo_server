@@ -79,7 +79,8 @@ photosrv_mgr_parse_opt(int argc, char *argv[])
                 break;
 
             default:
-                printf("Illegal option '%c' \n", cmd_opt);
+                photosrv_log_write(PHOTOSRV_STDERR_FD, "Illegal option '%c' \n",
+                    cmd_opt);
                 return PHOTOSRV_FALSE;
         }   
     }

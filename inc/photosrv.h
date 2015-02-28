@@ -7,11 +7,6 @@
 #ifndef _PHOTOSRV_H
 #define _PHOTOSRV_H
 
-#define PHOTOSRV_OK      0
-#define PHOTOSRV_ERROR  -1
-#define PHOTOSRV_TRUE    1
-#define PHOTOSRV_FALSE   0
-
 
 typedef enum {
     PHOTOSRV_SIGNAL_STOP,
@@ -31,7 +26,7 @@ struct photosrv_option_s {
 
 struct photosrv_manager_s {
     photosrv_option_t       option;
-    
+    void                   *slabs_mgr;
 };
 
 
