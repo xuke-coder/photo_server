@@ -12,9 +12,9 @@ typedef enum {
     PHOTOSRV_SIGNAL_STOP,
 } PHOTOSRV_SIGNAL_TYPE;
 
-typedef struct photosrv_manager_s   photosrv_manager_t;
-typedef struct photosrv_option_s    photosrv_option_t;
-
+typedef struct photosrv_manager_s       photosrv_manager_t;
+typedef struct photosrv_option_s        photosrv_option_t;
+typedef struct photosrv_core_modules_s  photosrv_core_modules_t;
 
 struct photosrv_option_s {
     int                     help;
@@ -23,10 +23,14 @@ struct photosrv_option_s {
     
 };
 
+struct photosrv_core_modules_s {
+    void                   *slabs_mgr;
+    void                   *reactor_mgr;
+};
 
 struct photosrv_manager_s {
-    photosrv_option_t       option;
-    void                   *slabs_mgr;
+    photosrv_option_t           option;
+    photosrv_core_modules_t     core_modules;
 };
 
 

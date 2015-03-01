@@ -3,6 +3,10 @@
 *date   : 2015-02-27
 */
 
+#include <stdarg.h>
+#include "photosrv_common.h"
+#include "photosrv_log.h"
+
 
 void
 photosrv_log_write(int fd, const char *str_format, ...)

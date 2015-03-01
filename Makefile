@@ -2,14 +2,16 @@ CC = gcc
 AR = ar
 DEBUG = -g
 CFLAG =-Wall -Werror
-LIB = -lpthread
+LIB = -lpthread -levent
 TARGET = photosrv
 ODIR = obj
 SDIR = src
 INC = -Iinc
 
 
-_OBJS = photosrv.o
+_OBJS = photosrv.o 		\
+	photosrv_log.o		\
+	photosrv_slabs.o	\
 
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 

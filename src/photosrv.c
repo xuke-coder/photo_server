@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include "photosrv_common.h"
+#include "photosrv_log.h"
 #include "photosrv.h"
 
 photosrv_manager_t  *photosrv_mgr;
