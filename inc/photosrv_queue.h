@@ -25,14 +25,14 @@ struct photosrv_queue_s {
                 que->head.prev = &que->head;        \
                 que->size = 0;                      \
                 que->max_size = max_size;           \
-                que->release_flag = XIO_FALSE;
+                que->release_flag = PHOTOSRV_FALSE;
 
 #define     photosrv_queue_release(que)             \
                 que->head.next = &que->head;        \
                 que->head.prev = &que->head;        \
                 que->size = 0;                      \
                 que->max_size = 0;                  \
-                que->release_flag = XIO_FALSE;
+                que->release_flag = PHOTOSRV_FALSE;
 
 #define     photosrv_queue_single_pop(que, head, node)   \
                 head = &que->head;                  \
